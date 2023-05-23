@@ -1,0 +1,71 @@
+.pagination{
+    padding: 30px 0 34px;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    
+    &__btn{
+        width: 41px;
+        height: 41px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #000;
+        background-color: transparent;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    &__btn:hover{
+        background-color: #ededed;
+        color: #000;
+    }
+    &__btn_active{
+        background-color: #000;
+        color: #fff;
+    }
+    &__btn_disabled{
+        pointer-events: none;
+        border: 1px solid rgba($color: #000000, $alpha: .3);
+    }
+    &__btn_disabled > svg path{
+        fill: rgba($color: #000000, $alpha: .3);
+    }
+    &__item:first-child > button{
+        border-radius: 8px 0 0 8px;
+    }
+    &__item:last-child > button{
+        border-radius: 0px 8px 8px 0px;
+    }
+    &__item:nth-last-child(-n+2) > button > svg{
+        transform: rotate(180deg);
+    }
+
+    &_dark button{
+        border: 1px solid #fff;
+        color: #fff;
+    }
+
+    &_dark &__btn_active{
+        background-color: #fff;
+        color: #000;
+    }
+
+    &_dark &__btn:hover{
+        background-color: #464646;
+        color: #fff;
+    }
+
+    &_dark &__btn > svg path{
+        fill: #fff;
+    }
+
+    &_dark &__btn_disabled > svg path{
+        fill: rgba($color: #fff, $alpha: .3);
+    }
+
+    &_dark &__btn_disabled{
+        border: 1px solid rgba($color: #fff, $alpha: .3);
+    }
+}

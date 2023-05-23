@@ -1,0 +1,41 @@
+
+.filters{
+    padding-top: 25px;
+
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+    }
+
+    &__inner > *{
+        flex-basis: calc(100% / 4 * 4 - 20px);
+        font-size: 14px;
+        line-height: 16px;
+        min-height: 45px;
+        margin: 10px;
+        background: transparent;
+    }
+    
+    &__inner_dark > div:not(:first-child){
+        border: 1px solid #fff;
+    }
+
+    &__inner_dark > div:not(:first-child) > div > div > svg:last-child path{
+        fill: #fff;
+    }
+    &__inner_dark > div:not(:first-child) > div > svg path{
+        fill: #fff;
+    }
+}
+
+@media (min-width: 768px) {
+    .filters__inner > * {
+        font-size: 13px;
+        line-height: 15px;
+        flex-basis: calc(100% / 12 * 3 - 20px);
+    }
+    .filters__inner > input {
+        width: 167px;
+    }
+}
